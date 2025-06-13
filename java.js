@@ -63,7 +63,7 @@ function mousePressed() {
   if (gameState === "menu") {
     // botão SITE
     if (dist(mouseX, mouseY, siteButton.x, siteButton.y) < (siteButton.w / 2) * s) {
-      window.open("https://editor.p5js.org/jenyffer.paglia.silva/full/v0-u7VZoG", "_blank");
+      window.open("site.html", "_blank");
     }
 
     // botão START
