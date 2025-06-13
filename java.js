@@ -1,4 +1,4 @@
-// variáveis
+//variáveis
 let img;
 let gameState = "menu";
 let scaleFactor = 1;
@@ -9,7 +9,7 @@ let startButton = { x: 755, y: 475, w: 100, h: 60 };
 let siteButton = { x: 755, y: 300, w: 100, h: 60 };
 
 function preload(){
-  img = loadImage("menu.jpg"); //imagem gerada por chat gpt I.A; comando "gere a imagem de uma fazenda em pixels" 
+  img = loadImage("menu.jpg"); // imagem gerada por chat gpt I.A; comando "gere a imagem de uma fazenda em pixels" 
 }
 
 function setup() {
@@ -23,8 +23,8 @@ function draw() {
     background(img);
     image(img, 0, 0, width, height);
 
-    drawButton(siteButton, "SITE");//gera o botão de "site";
-    drawButton(startButton, "START");//gera o botão "start";
+    drawButton(siteButton, "SITE"); // gera o botão de "site"
+    drawButton(startButton, "START"); // gera o botão "start"
 
     // animação de pulsar
     if (growing) {
@@ -63,17 +63,17 @@ function mousePressed() {
   if (gameState === "menu") {
     // botão SITE
     if (dist(mouseX, mouseY, siteButton.x, siteButton.y) < (siteButton.w / 2) * s) {
-      window.open("site.html", "_blank");
+      window.open("https://editor.p5js.org/jenyffer.paglia.silva/full/v0-u7VZoG", "_blank"); // Novo link do botão SITE
     }
 
-    // botão START
+    // botão START (vai para o site de chat)
     if (
       mouseX > startButton.x - (startButton.w / 2) * s &&
       mouseX < startButton.x + (startButton.w / 2) * s &&
       mouseY > startButton.y - (startButton.h / 2) * s &&
       mouseY < startButton.y + (startButton.h / 2) * s
     ) {
-      gameState = "site";
+      window.open("https://editor.p5js.org/jenyffer.paglia.silva/full/ykk6uRfbQ", "_blank"); // Site do jogo
     }
   }
 }
